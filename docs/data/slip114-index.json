@@ -1,0 +1,100 @@
+{
+  "academic_year": "114",
+  "structure": "academic_year/county/school.json",
+  "source": {
+    "publisher": "教育部",
+    "dataset": "全國教保資訊網－幼兒園收費明細",
+    "archive_acquisition": "kiang/ap.ece.moe.edu.tw"
+  },
+  "counties": [
+    {
+      "county": "南投縣",
+      "school_count": 177
+    },
+    {
+      "county": "嘉義市",
+      "school_count": 66
+    },
+    {
+      "county": "嘉義縣",
+      "school_count": 155
+    },
+    {
+      "county": "基隆市",
+      "school_count": 96
+    },
+    {
+      "county": "宜蘭縣",
+      "school_count": 120
+    },
+    {
+      "county": "屏東縣",
+      "school_count": 279
+    },
+    {
+      "county": "彰化縣",
+      "school_count": 312
+    },
+    {
+      "county": "新北市",
+      "school_count": 1085
+    },
+    {
+      "county": "新竹市",
+      "school_count": 156
+    },
+    {
+      "county": "新竹縣",
+      "school_count": 258
+    },
+    {
+      "county": "桃園市",
+      "school_count": 577
+    },
+    {
+      "county": "澎湖縣",
+      "school_count": 27
+    },
+    {
+      "county": "臺中市",
+      "school_count": 753
+    },
+    {
+      "county": "臺北市",
+      "school_count": 629
+    },
+    {
+      "county": "臺南市",
+      "school_count": 550
+    },
+    {
+      "county": "臺東縣",
+      "school_count": 120
+    },
+    {
+      "county": "花蓮縣",
+      "school_count": 142
+    },
+    {
+      "county": "苗栗縣",
+      "school_count": 182
+    },
+    {
+      "county": "連江縣",
+      "school_count": 5
+    },
+    {
+      "county": "金門縣",
+      "school_count": 26
+    },
+    {
+      "county": "雲林縣",
+      "school_count": 157
+    },
+    {
+      "county": "高雄市",
+      "school_count": 624
+    }
+  ],
+  "school_count": 6496
+}
