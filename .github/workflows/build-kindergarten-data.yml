@@ -1,0 +1,42 @@
+name: Build 114 per-school kindergarten database
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/build_slip114.py"
+      - ".github/workflows/build-kindergarten-per-school.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Rose Lab data repo
+        uses: actions/checkout@v4
+
+      - name: Checkout source archive
+        run: |
+          rm -rf _source
+          git clone --depth 1 https://github.com/kiang/ap.ece.moe.edu.tw.git _source
+
+      - name: Build per-school 114 database
+        run: python3 scripts/build_slip114.py
+
+      - name: Remove temporary source clone
+        run: rm -rf _source
+
+      - name: Commit generated database
+        run: |
+          git config user.name "rose-lab-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/data/slip114 docs/data/slip114-index.json
+          if git diff --cached --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "Build 114 per-school kindergarten database"
+            git push
+          fi
